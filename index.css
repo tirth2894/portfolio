@@ -111,7 +111,6 @@ body{
     width: 8%;
     margin: 2%;
     border-radius: 15px;
-    background-color: var(--tcolor);
     transition: transform 0.3s;
 }
 
