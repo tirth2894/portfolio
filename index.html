@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#intro" id="home">Home</a>
+        <a href="#aboutme" id="about">About</a>
+        <a href="#projectContainer" id="project">Project</a>
+        <a href="#contactus" id="contact">Contact us</a>
+    </div>
+
+    <div class="intro" id="intro">
+        <div id="detail" class="flex">
+            <p id="firstpara">Hi, My name is Tirth Patel</p>
+            <p id="secondpara">I am Comupter Science student at Department of computer science, Gujarat University. </p>
+
+            <div class="img">
+                <a href="https://www.instagram.com/_tirth_patel_04_/?igshid=OTk0YzhjMDVlZA%3D%3D">
+                    <img src="components/instragram.png" alt="" id="insta">
+                </a>
+                <a href="https://www.linkedin.com/in/tirth-patel-0a5a18257">
+                    <img src="components/linkdil.png" alt="" id="linkdil">
+                </a>
+            </div>
+        </div>
+
+        <div id="image" class="flex">
+            <img src="components/uphoto.png" id="uimage">
+        </div>
+    </div>
+
+    <p id="heading" class="flex">About Me</p>
+    <div class="flex about" id="aboutme">
+        <h3 id="title">Skills : </h3>
+        <div class="container flex">
+            <div class="box">
+                <p class="title">
+                    HTML :
+                </p>
+                <p class="desc">
+                    Hyper Text Markup Language.
+                </p>
+            </div>
+            <div class="box">
+                <p class="title">
+                    CSS :
+                </p>
+                <p class="desc">
+                    Cascading Style Sheet
+                </p>
+            </div>
+            <div class="box">
+                <p class="title">
+                    JAVASCRIPT :
+                </p>
+                <p class="desc">
+                    Scripting Language
+                </p>
+            </div>
+            <div class="box">
+                <p class="title">
+                    C :
+                </p>
+                <p class="desc">
+                    Programming Language
+                </p>
+            </div>
+            <div class="box">
+                <p class="title">
+                    C++ :
+                </p>
+                <p class="desc">
+                    Programming Language
+                </p>
+            </div>
+            <div class="box">
+                <p class="title">
+                    MYSQL : 
+                </p>
+                <p class="desc">
+                    Database Management System  
+                </p>
+            </div>
+            <div class="box">
+                <p class="title">
+                    PHP : 
+                </p>
+                <p class="desc">
+                    Hypertext Preprocessor
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <p id="heading" class="flex">Projects</p>
+    <div class="project" id="projectContainer">
+        <div class="card flex">
+            <img src="components/crudlogo.png" alt="">
+            <div class="info">
+                <p class="title"> CRUD : </p>
+                <p>CRUD operation using HTML,CSS and JS. This project is for colleges which have different course and
+                    maintain data about students for different courses. It's used local-storage for storing and
+                    maintaing data of students.</p>
+                <button>
+                    <a href="CRUD/index.html">Show project</a>
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <p id="heading" class="flex">Contact Me</p>
+    <div class="contact flex" id="contactus">
+        <form name="contact-form" method="post" action="" class="flex">
+
+            <input type="text" id="name" name="Name" placeholder="Enter yout Name" required>
+
+            <input type="email" id="email" name="Email" placeholder="Enter yout Email" required>
+
+            <input type="number" id="contactno" name="ContactNo" placeholder="Enter yout Contact No" required>
+
+            <input type="text" id="message" name="Message" placeholder="Enter yout Message" required>
+
+            <p id="msg" class="success"></p>
+
+            <button type="submit" id="submit"> Submit </button>
+        </form>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+
+</html>
