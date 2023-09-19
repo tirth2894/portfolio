@@ -111,12 +111,12 @@ body{
     width: 8%;
     margin: 2%;
     border-radius: 15px;
+    background-color: var(--tcolor);
     transition: transform 0.3s;
 }
 
 .img > a > img:hover,.img > a > img:active,.img > a > img:focus{
     box-shadow: 0px 0px 10px var(--tcolor);
-    background-color: var(--tcolor);
     transform: translateY(-10px);
 }
 
