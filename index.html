@@ -4,129 +4,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Document</title>
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
     <div class="navbar">
-        <a href="#intro" id="home">Home</a>
-        <a href="#aboutme" id="about">About</a>
-        <a href="#projectContainer" id="project">Project</a>
-        <a href="#contactus" id="contact">Contact us</a>
+        <h1>Portfolio</h1>
+
+        <ul id="menuItem" class="menu hide">
+            <li><a href="">Home</a></li>
+            <li><a href="#skill">About</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+        <img src="components/menu.png" id="menu">
     </div>
 
-    <div class="intro" id="intro">
-        <div id="detail" class="flex">
-            <p id="firstpara">Hi, My name is Tirth Patel</p>
-            <p id="secondpara">I am Comupter Science student at Department of computer science, Gujarat University. </p>
-
-            <div class="img">
-                <a href="https://www.instagram.com/_tirth_patel_04_/?igshid=OTk0YzhjMDVlZA%3D%3D">
-                    <img src="components/instragram.png" alt="" id="insta">
-                </a>
-                <a href="https://www.linkedin.com/in/tirth-patel-0a5a18257">
-                    <img src="components/linkdil.png" alt="" id="linkdil">
-                </a>
-            </div>
+    <div class="intro">
+        <div class="info">
+            <p class="title">
+                Hi, I am Tirth Patel.
+            </p>
+            <p class="desc">
+                I am student at Department of computer science, Gujarat university.
+            </p>
+            <a href="https://www.instagram.com/_tirth_patel_04_/?igshid=OTk0YzhjMDVlZA%3D%3D">
+                <img src="components/instagram.png" alt="">
+            </a>
+            
+            <a href="https://www.linkedin.com/in/tirth-patel-0a5a18257">
+                <img src="components/linkedin.png" alt="">
+            </a>
         </div>
+        
+        
 
-        <div id="image" class="flex">
-            <img src="components/uphoto.png" id="uimage">
-        </div>
-    </div>
-
-    <p id="heading" class="flex">About Me</p>
-    <div class="flex about" id="aboutme">
-        <h3 id="title">Skills : </h3>
-        <div class="container flex">
-            <div class="box">
-                <p class="title">
-                    HTML :
-                </p>
-                <p class="desc">
-                    Hyper Text Markup Language.
-                </p>
-            </div>
-            <div class="box">
-                <p class="title">
-                    CSS :
-                </p>
-                <p class="desc">
-                    Cascading Style Sheet
-                </p>
-            </div>
-            <div class="box">
-                <p class="title">
-                    JAVASCRIPT :
-                </p>
-                <p class="desc">
-                    Scripting Language
-                </p>
-            </div>
-            <div class="box">
-                <p class="title">
-                    C :
-                </p>
-                <p class="desc">
-                    Programming Language
-                </p>
-            </div>
-            <div class="box">
-                <p class="title">
-                    C++ :
-                </p>
-                <p class="desc">
-                    Programming Language
-                </p>
-            </div>
-            <div class="box">
-                <p class="title">
-                    MYSQL : 
-                </p>
-                <p class="desc">
-                    Database Management System  
-                </p>
-            </div>
-            <div class="box">
-                <p class="title">
-                    PHP : 
-                </p>
-                <p class="desc">
-                    Hypertext Preprocessor
-                </p>
-            </div>
+        <div class="photo">
+            <img src="components/uphoto.png" alt="">
         </div>
     </div>
 
-    <p id="heading" class="flex">Projects</p>
-    <div class="project" id="projectContainer">
-        <div class="card flex">
-            <img src="components/crudlogo.png" alt="">
-            <div class="info">
-                <p class="title"> CRUD : </p>
-                <p>CRUD operation using HTML,CSS and JS. This project is for colleges which have different course and
-                    maintain data about students for different courses. It's used local-storage for storing and
-                    maintaing data of students.</p>
-                <button>
-                    <a href="CRUD/index.html">Show project</a>
-                </button>
-            </div>
+    <h1>Skills : </h1>
+    <div class="skill" id="skill">
+        <div class="box">
+            <p class="title">HyperText Maarkup Language</p>
         </div>
-
+        <div class="box">
+            <p class="title">Cascading Style Sheets</p>
+        </div>
+        <div class="box">
+            <p class="title">Javascript</p>
+        </div>
+        <div class="box">
+            <p class="title">C</p>
+        </div>
+        <div class="box">
+            <p class="title">C++</p>
+        </div>
+        <div class="box">
+            <p class="title">Mysql</p>
+        </div>
+        <div class="box">
+            <p class="title">Hypertext Preprocessor</p>
+        </div>
     </div>
 
-    <p id="heading" class="flex">Contact Me</p>
-    <div class="contact flex" id="contactus">
-        <form name="contact-form" method="post" action="" class="flex">
+    <h1>Projects : </h1>
+    <div class="project" id="project">
+        <div class="box">
+            <p class="title">Title : Student data manager</p>
+            <p class="desc"><u><b>Discription</b></u> : This project is about CRUD operation with HyperText markup Language, Cascading style Sheets and Javascript. it is used local storage to store data of students which belongs to different courses.</p>
+            <button><a href="CRUD/index.html">Check It</a></button>
+        </div>
+    </div>
 
-            <input type="text" id="name" name="Name" placeholder="Enter yout Name" required>
+    <h1>Certificates : </h1>
+    <div class="certificate">
+        
+        <div class="box">
+            <a href="components/certificate1.png" download="Certificate.png">
+                <img src="components/certificate1.png" alt="">
+            </a>
+        </div>
 
-            <input type="email" id="email" name="Email" placeholder="Enter yout Email" required>
+        <div class="box">
+            <a href="components/certificate2.png" download="Certificate.png">
+                <img src="components/certificate2.png" alt="">
+            </a>
+        </div>
+    </div>
 
-            <input type="number" id="contactno" name="ContactNo" placeholder="Enter yout Contact No" required>
+    <h1>Contact Me :</h1>
+    <div class="contact" id="contact">
+        <form name="contact-form" method="post">
 
-            <input type="text" id="message" name="Message" placeholder="Enter yout Message" required>
+            <input type="text" id="name" name="Name" placeholder="Enter your name" required>
+
+            <input type="email" id="email" name="Email" placeholder="Enter your email" required>
+
+            <input type="number" id="contactno" name="ContactNo" placeholder="Enter your contact no" required>
+
+            <textarea name="Message" id="message" cols="30" rows="4" placeholder="Enter your message"></textarea>
 
             <p id="msg" class="success"></p>
 
@@ -134,8 +113,10 @@
         </form>
     </div>
 
-    <script src="index.js"></script>
-
+    <div class="footer">
+        <p>All rights are reserved &copy;.</p>
+    </div>
 </body>
+<script src="index.js"></script>
 
 </html>
