@@ -1,9 +1,9 @@
 :root {
-    --color: rgb(163, 83, 107);
+    --color: rgb(6, 44, 44);
     --tcolor: white;
     --tsize: 34px;
     --dsize: 25px;
-    --bcolor : rgb(255, 237, 237);
+    --bcolor : rgb(215, 219, 219);
 }
 
 * {
@@ -88,7 +88,7 @@ body {
     align-items: center;
     justify-content: space-evenly;
     margin-top: 34px;
-    padding: 0% 1%;
+    padding: 0px 50px;
 }
 
 .intro>.info {
@@ -152,7 +152,7 @@ h1{
 }
 
 .skill{
-    padding: 10px;
+    padding: 10px 50px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -184,7 +184,7 @@ h1{
 
 
 .project{
-    padding: 10px;
+    padding: 10px 60px;
 }
 
 .project > .box{
@@ -235,7 +235,7 @@ h1{
 }
 
 .certificate{
-    padding: 2%;
+    padding: 10px 50px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -289,7 +289,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-
+    padding: 0px 50px;
 }
 
 .contact > form{
@@ -381,13 +381,28 @@ h1{
 
     .intro {
         margin-top: 10px;
+        padding: 0px 10px;
     }
 
     .intro>.photo {
         height: 70%;
     }
 
+    .skill{
+        padding: 0px;
+    }
    
+    .project{
+        padding: 0px 10px;
+    }
+
+    .certificate{
+        padding: 0px 0px;
+    }
+
+    .contact{
+        padding: 0px;
+    }
 }
 
 @media (max-width : 380px) {
