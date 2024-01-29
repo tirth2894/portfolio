@@ -1,9 +1,9 @@
 :root {
-    --color: rgb(6, 44, 44);
-    --tcolor: white;
+    --color: rgb(83, 168, 105);
+    --tcolor: rgb(17, 17, 17);
     --tsize: 34px;
     --dsize: 25px;
-    --bcolor : rgb(215, 219, 219);
+    --bcolor : rgb(0, 0, 0);
 }
 
 * {
@@ -11,24 +11,39 @@
     padding: 0px;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'Trebuchet MS';
 }
 
 body {
-    height: 100vh;
-    width: 98.75vw;
-    background-color: var(--bcolor);
+    background: url('components/background.jpg') center center;
+    backdrop-filter: blur(3px);
 }
+
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: rgba(0, 0, 0, 0.932);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color);
+    border-radius: 20px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
 .navbar {
     display: flex;
     align-items: center;
-    background-color: var(--color);
     padding: 0% 2%;
     height: 50px;
+    width: 100%;
 }
 
 .navbar > h1 {
-    color: var(--tcolor);
+    color: var(--color);
 }
 
 .navbar > .menu {
@@ -36,6 +51,7 @@ body {
     list-style: none;
     display: flex;
     align-items: center;
+    margin-top: 8px;
     justify-content: end;
 }
 
@@ -45,7 +61,7 @@ body {
 
 .navbar>.menu>li>a {
     text-decoration: none;
-    color: var(--tcolor);
+    color: var(--color);
     font-size: var(--dsize);
 }
 
@@ -55,7 +71,7 @@ body {
     height: 3px;
     width: 0%;
     transition: width 0.4s;
-    background-color: var(--tcolor);
+    background-color: var(--color);
     border-radius: 20px;
 }
 
@@ -83,7 +99,7 @@ body {
 
 
 .intro {
-    height: 50%;
+    height: 50vh;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -106,14 +122,19 @@ body {
 .intro>.info>.desc {
     font-size: var(--dsize);
     margin: .5%;
-    color: rgb(95, 95, 95);
+    color: rgb(112, 112, 112);
+}
+
+.intro>.info>a{
+    text-decoration: none;
 }
 
 .intro>.info>a>img{
     height: 30px;
     margin: 5px;
-    border-radius: 5px;
+    border-radius: 7px;
     transition: transform 0.4s;
+    background-color: var(--color);
 }
 
 .intro>.info>a>img:hover,.intro>.info>a>img:focus,.intro>.info>a>img:focus{
@@ -126,13 +147,14 @@ body {
     flex-shrink: 1;
     border-radius: 50%;
     box-shadow: 0px 0px 20px var(--color);
-    background-color: var(--bcolor);
+    background-color: var(--tcolor);
     overflow: hidden;
+    background: url('components/background.jpg') center center/cover;
     transition: transform 0.4s;
 }
 
 .intro>.photo:hover,.intro>.photo:focus{
-    transform: scale(1.05   );
+    transform: scale(1.05);
     box-shadow: 0px 0px 30px var(--color);
 }
 
@@ -147,8 +169,6 @@ h1{
     text-align: center;
     margin: 2% 0%;
     font-weight: bolder;
-    text-shadow: 0px 0px 3px var(--color);
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .skill{
@@ -167,11 +187,12 @@ h1{
     width: 350px;
     display: inline-block;
     transition: transform 0.4s;
-    box-shadow: 0px 0px 15px gray;
+    background-color: var(--tcolor);
+    box-shadow: 0px 0px 13px rgb(64, 65, 64);
 }
 
 .skill > .box:hover,.skill > .box:focus{
-    box-shadow: 0px 0px 15px var(--color);
+    box-shadow: 0px 0px 13px var(--color);
     transform: translateY(-7px);
 }
 
@@ -192,13 +213,14 @@ h1{
     padding: 10px;
     margin: 2% 0%;
     transition: transform 0.4s;
-    box-shadow: 0px 0px 15px gray;
+    background-color: var(--tcolor);
+    box-shadow: 0px 0px 15px rgb(65, 64, 64);
     
 }
 
 .project > .box:hover,.project > .box:focus{
-    transform: translateY(-7px);
     box-shadow: 0px 0px 15px var(--color);
+    transform: translateY(-7px);
 }
 
 .project > .box > .title{
@@ -209,18 +231,17 @@ h1{
 
 .project > .box > .desc{
     font-size: 15px;
-    color: rgb(95, 95, 95);
+    color: var(--color);
     margin: 5px 0px;
 }
 
 .project > .box > button{
-    background-color: var(--color);
+    background-color: var(--bcolor);
     padding: 8px;
     margin: 5px 0px;
-    border: none;
     border-radius: 10px;
     transition: transform 0.3s;
-    border: 2px solid white;
+    border: 2px solid var(--color);
 }
 
 .project > .box > button:hover,.project > .box > button:focus{
@@ -229,59 +250,9 @@ h1{
 }
 
 .project > .box > button > a{
-    color: var(--tcolor);
+    color: var(--color);
     text-decoration: none;
     font-size: 17px;
-}
-
-.certificate{
-    padding: 10px 50px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.certificate > .box{
-    border-radius: 15px;
-    padding: 5px;
-    margin: 5px;
-    transition: transform 0.4s;
-    overflow: hidden;
-    box-shadow: 0px 0px 15px black;
-
-}
-
-.certificate > .box > img{
-    height: 100%;
-    width: 100%;
-}
-
-.certificate > .box::before{
-    content: "Download";
-    position: absolute;
-    top: -100%;
-    height: 100%;
-    width: 100%;
-    background-color: var(--color);
-    left: 0%;
-    transition: top 0.3s;
-    font-size: var(--dsize);
-    color: white;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    font-weight: bold;
-    opacity: .9;
-}
-
-.certificate > .box:hover,.certificate > .box:focus{
-    box-shadow: 0px 0px 15px var(--color);
-    transform: translateY(-10px);
-}
-
-.certificate > .box:hover::before,.certificate > .box:focus::before{
-    top: -80%;
 }
 
 
@@ -303,18 +274,21 @@ h1{
 .contact > form > input,textarea{
     margin: 10px 0px;
     width: 250px;
-    font-size: 20px;
+    font-size: 19px;
     color: var(--color);
     outline: none;
     border-radius: 10px;
-    border: 2px solid var(--color);
-    padding: 0px 3px;
-    background-color: var(--bcolor);;
+    border: none;
+    box-shadow: 0px 0px 13px rgb(65, 64, 64);
+    padding: 3px 5px;
+    transition: transform 0.4s;
+    background-color: var(--tcolor);
 }
 
 .contact > form > input:focus,textarea:focus{
-    border: 2px solid var(--color);
+    border: 1px solid var(--color);
     box-shadow: 0px 0px 10px var(--color);
+    transform: translateY(-4px);
 }
 
 .contact > form > .success{
@@ -332,6 +306,7 @@ h1{
     padding: 5px;
     border-radius: 10px;
     background-color: var(--color);
+    border: 2px solid var(--bcolor);
     color: var(--tcolor);
     margin-bottom: 20px;
     transition: transform 0.4s;
@@ -346,7 +321,9 @@ h1{
     background-color: var(--color);
     text-align: center;
     padding: 5px;
-    font-size: var(--dsize);
+    width: 100%;
+    font-size: calc(var(--dsize)-3px);
+    font-weight: bold;
     color: var(--tcolor);
 }
 
@@ -374,7 +351,7 @@ h1{
         top: 50px;
         left: 0px;
         display: none;
-        background-color: var(--color);
+        background-color: var(--tcolor);
         z-index: 1;
     }
 
