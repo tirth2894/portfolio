@@ -34,6 +34,56 @@ body {
     background: #555;
   }
 
+#loader{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.load{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0px 5px;
+    background-color: var(--color);
+}
+
+#load1{
+    animation: loading 1.5s 0s infinite;
+}
+
+#load2{
+    animation: loading 1.5s 0.15s infinite;
+}
+
+#load3{    
+    animation: loading 1.5s 0.3s infinite;
+}
+
+#load4{
+    animation: loading 1.5s 0.45s infinite;
+}
+
+#load5{
+    animation: loading 1.5s 0.6s infinite;
+}
+
+@keyframes loading {
+    0%,100%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-15px);
+    }
+}
+
+#page{
+    display: none;
+}
+
 .navbar {
     display: flex;
     align-items: center;

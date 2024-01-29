@@ -1,6 +1,14 @@
 let menu = document.getElementById("menu");
 let temp = true;
 
+window.onload = function(){
+    let loader = document.getElementById("loader");
+    let page = document.getElementById("page");
+    loader.style.display = "none";
+    page.style.display = "block";
+    console.log("sdf");
+}
+
 menu.onclick = function () {
     let menuItem = document.getElementById("menuItem");
 
