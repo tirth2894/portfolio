@@ -1,3 +1,44 @@
+document.addEventListener("DOMContentLoaded", function() {
+    let content = document.getElementsByClassName('content');
+    let isVisible = [];
+
+    for (let i = 0; i < content.length; i++) {
+        isVisible[i] = false;        
+        
+    }
+
+
+    window.addEventListener('scroll', function() {
+        for(let i = 0; i < content.length; i++) {
+            
+            if (!isVisible[i] && isScrolledIntoView(content[i])) {
+                content[i].style.opacity = 1;
+                content[i].style.transform = "translateY(0px)";
+                isVisible[i] = true;
+            } else if (isVisible[i] && !isScrolledIntoView(content[i])) {
+                content[i].style.opacity = 0;
+                content[i].style.transform = "translateY(50px)";
+                isVisible[i] = false;
+            }
+            
+        }
+
+    });
+
+    function isScrolledIntoView(element) {
+        let rect = element.getBoundingClientRect();
+        let elemTop = rect.top;
+        let elemBottom = rect.bottom - 250;
+
+        let isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+        return isVisible;
+    }
+});
+
+
+
+
+
 let menu = document.getElementById("menu");
 let temp = true;
 
