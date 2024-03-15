@@ -1,9 +1,9 @@
 :root {
-    --color: rgb(52, 158, 66);
-    --tcolor: rgb(0, 0, 0);
+    --color: rgb(60, 167, 134);
+    --tcolor: rgb(0 0 0);
     --tsize: 34px;
     --dsize: 25px;
-    --bcolor : #0f0f0f;
+    --bcolor : rgb(24, 24, 24);
 }
 
 * {
@@ -182,9 +182,10 @@ body {
 .intro>.info>a>img{
     height: 30px;
     margin: 5px;
-    border-radius: 7px;
     transition: transform 0.4s;
     background-color: var(--color);
+    border: 1px solid var(--color);
+    border-radius: 9px;
 }
 
 .intro>.info>a>img:hover,.intro>.info>a>img:focus,.intro>.info>a>img:focus{
@@ -236,7 +237,7 @@ h1{
     margin: 10px;
     width: 350px;
     display: inline-block;
-    transition: transform 0.4s;
+    /* transition: transform 0.4s; */
     background-color: var(--bcolor);
 }
 
@@ -442,7 +443,7 @@ h1{
 .content {
     opacity: 0; 
     transform: translateY(50px);
-    transition: all 0.7s ease-in-out; 
+    transition: all 0.6s ease-in-out; 
 }
 
 #temp,#skills,#skill{
