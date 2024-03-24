@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function isScrolledIntoView(element) {
         let rect = element.getBoundingClientRect();
         let elemTop = rect.top;
-        let elemBottom = rect.bottom - 250;
+        let elemBottom = rect.bottom-50;
 
         let isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
         return isVisible;
@@ -47,7 +47,6 @@ window.onload = function(){
     let page = document.getElementById("page");
     loader.style.display = "none";
     page.style.display = "block";
-    console.log("sdf");
 }
 
 menu.onclick = function () {
@@ -63,6 +62,32 @@ menu.onclick = function () {
     }
 
 }
+
+
+let theme = document.getElementById("theme");
+let theamtemp = true;
+let menuItemid = document.getElementById("menu");
+theme.onclick = function(){
+    const root = document.documentElement;
+    if(theamtemp)
+    {
+        root.style.setProperty('--tcolor', 'white');
+        root.style.setProperty('--bcolor', 'rgb(214, 214, 214)');
+        theme.style.backgroundColor = "var(--tcolor)";
+        menuItemid.style.backgroundColor = "var(--color)";
+        theamtemp = false;
+    }
+    else{
+        root.style.setProperty('--tcolor', 'black');
+        root.style.setProperty('--bcolor', 'rgb(22, 22, 22)');
+        theme.style.backgroundColor = "rgb(184, 42, 97)";
+        menuItemid.style.backgroundColor = "var(--tcolor)";
+        theamtemp = true;
+    }
+}
+
+
+
 
 const scriptURL = "https://script.google.com/macros/s/AKfycbwzh_c5CW6TFVzaYlKKGyeAmNjPtoMTfiaHnpNcs3R-KY5lCxzNtyCP2esbwJ6XoPAEKw/exec"
 const form = document.forms['contact-form']
