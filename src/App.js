@@ -1,7 +1,13 @@
+import './index.css';
+import Navbar from './compepnets/navbar';
+
+
 function App() {
   return (
     <>
-    <p>ndskfnk</p>
+      <div className='text-white'>
+        <Navbar />  
+      </div>
     </>
   );
 }
