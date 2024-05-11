@@ -4,24 +4,24 @@ function skills() {
     return (
         <div className='flex flex-wrap'>
             <div className='my-3 w-full md:w-1/3 px-5'>
-                <p className='text-center text-3xl m-4'>Skills</p>
+                <p className='text-center text-2xl md:text-3xl m-4' id='about'>Skills</p>
                 <div className='flex flex-wrap'>
-                    <span className='bg-[#b72860] m-2 text-xl px-3 py-1.5 rounded-3xl'>HTML</span>
-                    <span className='bg-[#b72860] m-2 text-xl px-3 py-1.5 rounded-3xl'>Css</span>
-                    <span className='bg-[#b72860] m-2 text-xl px-3 py-1.5 rounded-3xl'>JavaScript</span>
-                    <span className='bg-[#b72860] m-2 text-xl px-3 py-1.5 rounded-3xl'>PHP</span>
-                    <span className='bg-[#b72860] m-2 text-xl px-3 py-1.5 rounded-3xl'>MySql</span>
-                    <span className='bg-[#b72860] m-2 text-xl px-3 py-1.5 rounded-3xl'>C</span>
-                    <span className='bg-[#b72860] m-2 text-xl px-3 py-1.5 rounded-3xl'>C++</span>
-                    <span className='bg-[#b72860] m-2 text-xl px-3 py-1.5 rounded-3xl'>Pyhton</span>
+                    <span className='bg-[#b72860] m-2 text-lg px-3 py-1 rounded-3xl'>HTML</span>
+                    <span className='bg-[#b72860] m-2 text-lg px-3 py-1 rounded-3xl'>Css</span>
+                    <span className='bg-[#b72860] m-2 text-lg px-3 py-1 rounded-3xl'>JavaScript</span>
+                    <span className='bg-[#b72860] m-2 text-lg px-3 py-1 rounded-3xl'>PHP</span>
+                    <span className='bg-[#b72860] m-2 text-lg px-3 py-1 rounded-3xl'>MySql</span>
+                    <span className='bg-[#b72860] m-2 text-lg px-3 py-1 rounded-3xl'>C</span>
+                    <span className='bg-[#b72860] m-2 text-lg px-3 py-1 rounded-3xl'>C++</span>
+                    <span className='bg-[#b72860] m-2 text-lg px-3 py-1 rounded-3xl'>Python</span>
                 </div>
             </div>
 
             <div className='my-3 px-5 w-full md:w-2/3'>
-                <p className='text-center text-3xl m-4'>Activity</p>
+                <p className='text-center text-2xl md:text-3xl m-4'>Activity</p>
 
                 <div className='p-4 bg-[#1f4552] rounded-2xl my-4'>
-                    <p className='text-xl font-semibold'>
+                    <p className='text-xl font-bold'>
                         Participated in event management
                     </p>
                     <p>
@@ -30,7 +30,7 @@ function skills() {
                 </div>
 
                 <div className='p-4 bg-[#1f4552] rounded-2xl my-4'>
-                    <p className='text-xl font-semibold'>
+                    <p className='text-xl font-bold'>
                         Participated in Hackathons
                     </p>
                     <p>

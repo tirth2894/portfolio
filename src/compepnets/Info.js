@@ -5,10 +5,10 @@ function Info() {
   return (
         <div className='flex py-7 flex-wrap-reverse w-full justify-evenly items-center'>
             <div className='my-5 mx-2 flex flex-col justify-center items-start' >
-                <p className='text-3xl'>
-                    Hi, I am <span className='font-semibold text-[#b72860]'>Tirth Patel</span>
+                <p className='text-2xl md:text-3xl'>
+                    Hi, I am <span className='font-extrabold text-[#b63265]'>Tirth Patel</span>
                 </p>
-                <p className='text-2xl'>
+                <p className='text-xl md:text-2xl'>
                     A Web Developer
                 </p>
             </div>
