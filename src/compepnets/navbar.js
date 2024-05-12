@@ -25,9 +25,6 @@ function Navbar() {
                     <li className='px-4 hover:text-[#b72860] mt-5 w-full text-center py-3' onClick={toogle}>
                         <a href="#project">Project</a>
                     </li>
-                    <li className='px-4 hover:text-[#b72860] mt-5 w-full text-center py-3' onClick={toogle}>
-                        <a href="#project">Contact Me</a>
-                    </li>
                 </ul>
             </div>
 
@@ -43,9 +40,6 @@ function Navbar() {
                     </li>
                     <li className='px-4 hover:text-[#b72860] transition-all duration-300'>
                         <a href="#project">Project</a>
-                    </li>
-                    <li className='px-4 hover:text-[#b72860] transition-all duration-300'>
-                        <a href="#project">Contact Me</a>
                     </li>
                 </ul>
             </div>           

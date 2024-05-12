@@ -25,19 +25,19 @@ function skills() {
                         Participated in event management
                     </p>
                     <p>
-                        Participated as Team leader of technical team in Tech Kaushalya technical event managed by Department of Computer Science. 
+                        ~ Participated as leader of technical team in Tech Kaushalya technical event organized by Department of Computer Science.
                     </p>
                 </div>
 
                 <div className='p-4 bg-[#1f4552] rounded-2xl my-4'>
                     <p className='text-xl font-bold'>
-                        Participated in Hackathons
+                        Participated Hackathons
                     </p>
                     <p>
-                        Participated Smart India Hackathon(SIH) 2023.
+                        ~ Smart India Hackathon(SIH) 2023.
                     </p>
                     <p>
-                        Participated in Hack-NU-thon 5.0 at Nirma University.
+                        ~ Hack-NU-thon 5.0 at Nirma University.
                     </p>
                 </div>
             </div>

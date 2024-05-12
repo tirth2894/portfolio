@@ -6,7 +6,7 @@ function Projects() {
             <p className='text-center text-2xl md:text-3xl m-4' id='project'>Projects</p>
             <div className='flex flex-wrap justify-center items-center'>
 
-                <a href="https://homotrack.wuaze.com/" target='_blank' className='w-72 m-5 rounded-lg bg-[#1f4552] block'>
+                <a href="https://homotrack.wuaze.com/" target='_blank' className='w-72 m-5 rounded-lg bg-[#1f4552] block hover:bg-[#214d5c]'>
                     <img src={project1} alt="Photo" className='w-full p-2' />
 
                     <p className='p-2 w-full'>
