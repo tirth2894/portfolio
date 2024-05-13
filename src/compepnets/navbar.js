@@ -13,7 +13,7 @@ function Navbar() {
     return (
         <>
              {/* Mobile view */}
-             <div className={menu ? 'h-screen w-full bg-[#0a283bf5] p-5 fixed' : 'hidden'}>
+             <div className={menu ? 'h-screen w-full bg-[#0a283bf5] p-5 fixed z-10' : 'hidden'}>
                 <Unicons.UilTimes onClick={toogle} height="40" width="40" color="white" className='float-right lg:hidden' />
                 <ul className='text-xl flex flex-col mt-16 items-center'>
                     <li className='px-4 hover:text-[#b72860] mt-5 w-full text-center py-3' onClick={toogle}>

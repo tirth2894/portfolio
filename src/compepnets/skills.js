@@ -9,6 +9,7 @@ function skills() {
                     <span className='bg-[#b72860] m-2 text-lg px-3 py-1 rounded-3xl'>HTML</span>
                     <span className='bg-[#b72860] m-2 text-lg px-3 py-1 rounded-3xl'>Css</span>
                     <span className='bg-[#b72860] m-2 text-lg px-3 py-1 rounded-3xl'>JavaScript</span>
+                    <span className='bg-[#b72860] m-2 text-lg px-3 py-1 rounded-3xl'>Jquery</span>
                     <span className='bg-[#b72860] m-2 text-lg px-3 py-1 rounded-3xl'>PHP</span>
                     <span className='bg-[#b72860] m-2 text-lg px-3 py-1 rounded-3xl'>MySql</span>
                     <span className='bg-[#b72860] m-2 text-lg px-3 py-1 rounded-3xl'>C</span>
