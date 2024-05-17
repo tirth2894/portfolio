@@ -23,15 +23,6 @@ function skills() {
 
                 <div className='p-4 bg-[#1f4552] rounded-2xl my-4'>
                     <p className='text-xl font-bold'>
-                        Participated in event management
-                    </p>
-                    <p>
-                        ~ Participated as leader of technical team in Tech Kaushalya technical event organized by Department of Computer Science.
-                    </p>
-                </div>
-
-                <div className='p-4 bg-[#1f4552] rounded-2xl my-4'>
-                    <p className='text-xl font-bold'>
                         Participated Hackathons
                     </p>
                     <p>
@@ -41,6 +32,17 @@ function skills() {
                         ~ Hack-NU-thon 5.0 at Nirma University.
                     </p>
                 </div>
+
+                <div className='p-4 bg-[#1f4552] rounded-2xl my-4'>
+                    <p className='text-xl font-bold'>
+                        Participated in event management
+                    </p>
+                    <p>
+                        ~ Participated as leader of technical team in Tech Kaushalya technical event organized by Department of Computer Science.
+                    </p>
+                </div>
+
+
             </div>
         </div>
     )
