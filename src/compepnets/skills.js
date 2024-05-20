@@ -2,8 +2,8 @@ import React from 'react'
 
 function skills() {
     return (
-        <div className='flex flex-wrap'>
-            <div className='my-3 w-full md:w-1/3 px-5'>
+        <div className='flex flex-wrap justify-evenly'>
+            <div className='my-3 mx-3 w-full md:w-1/3 px-5 bg-[#15374d] rounded-2xl '>
                 <p className='text-center text-2xl md:text-3xl m-4' id='about'>Skills</p>
                 <div className='flex flex-wrap'>
                     <span className='bg-[#b72860] m-2 text-lg px-3 py-1 rounded-3xl'>HTML</span>
@@ -18,27 +18,27 @@ function skills() {
                 </div>
             </div>
 
-            <div className='my-3 px-5 w-full md:w-2/3'>
+            <div className='my-3 mx-3 px-5 w-full md:w-3/5 bg-[#15374d] rounded-2xl'>
                 <p className='text-center text-2xl md:text-3xl m-4'>Activity</p>
 
-                <div className='p-4 bg-[#1f4552] rounded-2xl my-4'>
+                <div className='px-4 py-3 my-1'>
                     <p className='text-xl font-bold'>
                         Participated Hackathons
                     </p>
                     <p>
-                        ~ Smart India Hackathon(SIH) 2023.
+                        ~ In 2023 Smart India Hackathon(SIH).
                     </p>
                     <p>
-                        ~ Hack-NU-thon 5.0 at Nirma University.
+                        ~ In 2024 Hack-NU-thon 5.0 at Nirma University.
                     </p>
                 </div>
 
-                <div className='p-4 bg-[#1f4552] rounded-2xl my-4'>
+                <div className='px-4 py-3 my-1'>
                     <p className='text-xl font-bold'>
                         Participated in event management
                     </p>
                     <p>
-                        ~ Participated as leader of technical team in Tech Kaushalya technical event organized by Department of Computer Science.
+                        ~ In 2023 & 2024 Participated in technical team of Tech Kaushalya technical event organized by Department of Computer Science.
                     </p>
                 </div>
 
