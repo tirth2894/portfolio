@@ -1,7 +1,6 @@
 import React from 'react'
 import uphoto from './uphoto.png'
 import { TypeAnimation } from 'react-type-animation';
-import { IoMdMail } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa6";
 
@@ -30,20 +29,17 @@ function Info() {
 
                 <div className='flex mt-2'>
 
-                    <a href="#">
+                    <a href="https://www.linkedin.com/in/tirth-patel-0a5a18257/" target='_blank' rel="noopener noreferrer">
                         <FaLinkedin title='Linkedin' className='m-2 ml-0 h-7 w-7 hover:text-[#b72860]' />
                     </a>
-                    <a href="#">
-                        <IoMdMail title='Mail' className='m-2 h-7 w-7 hover:text-[#b72860]' />
-                    </a>
-                    <a href="#">
+                    <a href="https://github.com/tirth2894" target='_blank' rel="noopener noreferrer">
                         <FaGithub title='Github' className='m-2 h-7 w-7 hover:text-[#b72860]' />
                     </a>
                 </div>
             </div>
 
             <div className='h-[25rem] w-[25rem] flex justify-center items-center'>
-                <img src={uphoto} alt="Photo" className='h-full' />
+                <img src={uphoto} alt='UserPhoto' className='h-full' />
             </div>
         </div>
     )

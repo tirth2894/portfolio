@@ -1,5 +1,5 @@
 import './index.css';
-import'./App.css';
+import './App.css';
 import Navbar from './compepnets/navbar';
 import Info from './compepnets/Info';
 import Skills from './compepnets/skills';
@@ -11,13 +11,13 @@ function App() {
   return (
     <>
       <div className='text-white bg-[#0a283b] font-[Nirmala UI] font-semibold'>
-        
-        <Navbar /> 
-        <Info /> 
+
+        <Navbar />
+        <Info />
         <Skills />
-        <Projects/>
-        <Contact/>
-        <UpArrow/>
+        <Projects />
+        <Contact />
+        <UpArrow />
       </div>
     </>
   );
