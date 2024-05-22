@@ -38,16 +38,16 @@ function Projects() {
                 <p className='text-center text-2xl md:text-3xl m-4' >Projects</p>
 
                 <div className='flex flex-wrap justify-evenly items-center'>
-                    <div className='h-72 w-[16rem] my-3 rounded-lg bg-[#b72860] block hover:bg-[#1f4552] hover:transition duration-300 hover:translate-y-[-10px]'>
+                    <div className='h-72 w-[16rem] my-3 rounded-lg bg-[#b72860] block hover:bg-[#0a283b] hover:transition duration-300 hover:translate-y-[-10px]'>
                         <div className='p-4 w-full'>
                             <p className='text-xl font-bold my-1'>Cityscape Challenges</p>
                             <p>Embark on an urban adventure with my city game, completing tasks to uncover hidden treasures. Explore dynamic game zones designed to challenge and entertain for an immersive experience.</p>
                             <div className='flex items-center mt-3'>
                                 <a href="https://github.com/tirth2894/Cityscape_Challenge" target='_blank' rel="noopener noreferrer">
-                                    <FaGithub title='Github' className='h-7 w-7 hover:text-[#b72860]' />
+                                    <FaGithub title='Github' className='h-7 w-7' />
                                 </a>
                                 <a href="https://tirth2894.github.io/Cityscape_Challenge/" target='_blank' rel="noopener noreferrer">
-                                    <button className='mx-3 border-2 border-white p-1 rounded-lg hover:bg-[#b72860]'>
+                                    <button className='mx-3 border-2 border-white p-1 rounded-lg hover:bg-white hover:text-[#0a283b]'>
                                         Let's try <CiShare1 title='try' className='h-5 w-5 inline-block ' />
                                     </button>
                                 </a>
@@ -55,16 +55,16 @@ function Projects() {
                         </div>
                     </div>
 
-                    <div className='h-72 w-[16rem] my-3 rounded-lg bg-[#b72860] block hover:bg-[#1f4552] hover:transition duration-300 hover:translate-y-[-10px]'>
+                    <div className='h-72 w-[16rem] my-3 rounded-lg bg-[#b72860] block hover:bg-[#0a283b] hover:transition duration-300 hover:translate-y-[-10px]'>
                         <div className='p-4 w-full'>
                             <p className='text-xl font-bold my-1'>Homotrack</p>
                             <p>A Homotrack, a dynamic blood bank management system designed to streamline the process of blood donation and distribution. With its user-friendly interface and robust functionality.</p>
                             <div className='flex items-center mt-3'>
                                 <a href="https://github.com/tirth2894/Blood-Bank" target='_blank' rel="noopener noreferrer">
-                                    <FaGithub title='Github' className='h-7 w-7 hover:text-[#b72860]' />
+                                    <FaGithub title='Github' className='h-7 w-7' />
                                 </a>
                                 <a href="#" target='_blank' rel="noopener noreferrer">
-                                    <button className='mx-3 border-2 border-white p-1 rounded-lg hover:bg-[#b72860]'>
+                                    <button className='mx-3 border-2 border-white p-1 rounded-lg hover:bg-white hover:text-[#0a283b]'>
                                         Let's try <CiShare1 title='try' className='h-5 w-5 inline-block ' />
                                     </button>
                                 </a>
