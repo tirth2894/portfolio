@@ -3,6 +3,7 @@ import { AiFillInstagram } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaGithub } from "react-icons/fa6";
+import { IoCall } from "react-icons/io5";
 import emailjs from '@emailjs/browser';
 
 
@@ -43,7 +44,7 @@ function Contact() {
                 </svg>
                 <span className="sr-only">Info</span>
                 <div>
-                    <span className="font-medium">Success!</span> Your message sent successfully.
+                    Your message has been sent to Tirth successfully.
                 </div>
             </div>
 
@@ -52,19 +53,28 @@ function Contact() {
                 <div className="mx-3 lg:mx-6 grid sm:grid-cols-2 items-center gap-16 px-4 py-8 bg-[#15374d] shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-2xl">
                     <div>
                         <h1 className="text-3xl font-semibold">Let's Talk</h1>
-                        <p className="text-sm text-gray-400 mt-3">Have some idea or brand to develop and need help? Then reach out i'd love to hear about your requirements.</p>
+                        <p className="text-sm text-gray-400 mt-3">Have an Idea or Brand to Develop? Let's Collaborate!</p>
                         <div className="mt-12">
-                            <h2 className="text-lg font-semibold">Email</h2>
+                            <h2 className="text-lg font-semibold">Contact</h2>
                             <ul className="mt-3">
-                                <li className="flex items-center">
+                                <li className="flex items-center my-2">
                                     <a href="mailto:tirthptl2894@gmail.com" rel="noopener noreferrer" target='_blank'>
-                                        <div className="bg-[#0a283b] h-10 w-10 rounded-full flex items-center justify-center shrink-0 text-white hover:text-[#b72860] hover:translate-y-[-7px] transition-all duration-400">
+                                        <div className="bg-[#0a283b] h-10 w-10 rounded-full flex items-center justify-center shrink-0 text-white hover:text-[#b72860] transition-all">
                                             <IoMdMail className='w-6 h-6' />
                                         </div>
                                     </a>
                                     <div className='ml-2'>
-                                        <small className="block">Mail</small>
                                         <p className='font-semibold'>tirthptl2894@gmail.com</p>
+                                    </div>
+                                </li>
+                                <li className="flex items-center my-2">
+                                    <a href="tel:+919924062681" rel="noopener noreferrer" target='_blank'>
+                                        <div className="bg-[#0a283b] h-10 w-10 rounded-full flex items-center justify-center shrink-0 text-white hover:text-[#b72860] transition-all">
+                                            <IoCall className='w-6 h-6' />
+                                        </div>
+                                    </a>
+                                    <div className='ml-2'>
+                                        <p className='font-semibold'>+91 99240 62681</p>
                                     </div>
                                 </li>
                             </ul>
