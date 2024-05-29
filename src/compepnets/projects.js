@@ -15,20 +15,20 @@ function EducationProjects() {
                         <li className="mb-5 ms-4">
                             <div className="absolute w-3 h-3 bg-gray-500 rounded-full mt-1.5 -start-1.5 border border-gray-500"></div>
                             <time className="mb-1 text-sm font-normal leading-none text-gray-400">March 2019-20</time>
-                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">SSC</h3>
-                            <p className="text-base font-normal text-gray-500 dark:text-gray-400">Ahmedabad, Gujarat</p>
+                            <h3 className="text-lg font-semibold text-white">SSC</h3>
+                            <p className="text-base font-normal text-gray-400">Ahmedabad, Gujarat</p>
                         </li>
                         <li className="mb-5 ms-4">
                             <div className="absolute w-3 h-3 bg-gray-500 rounded-full mt-1.5 -start-1.5 border border-gray-500"></div>
                             <time className="mb-1 text-sm font-normal leading-none text-gray-400">March 2021-22</time>
-                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">HSC</h3>
-                            <p className="text-base font-normal text-gray-500 dark:text-gray-400">Ahmedabad, Gujarat</p>
+                            <h3 className="text-lg font-semibold text-white">HSC</h3>
+                            <p className="text-base font-normal text-gray-400">Ahmedabad, Gujarat</p>
                         </li>
                         <li className="mb-5 ms-4">
                             <div className="absolute w-3 h-3 bg-[#b72860] rounded-full mt-1.5 -start-1.5 border border-[#b72860] animate-ping"></div>
                             <time className="mb-1 text-sm font-normal leading-none text-gray-400">June 2022-Present</time>
-                            <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Bachelor in Computer science</h3>
-                            <p className="text-base font-normal text-gray-500 dark:text-gray-400">Gujarat University, Ahmedabad, Gujarat</p>
+                            <h3 className="text-lg font-semibold text-white">Bachelor in Computer science</h3>
+                            <p className="text-base font-normal text-gray-400">Gujarat University, Ahmedabad, Gujarat</p>
                         </li>
                     </ol>
                 </div>
