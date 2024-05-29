@@ -62,7 +62,7 @@ function EducationProjects() {
                                     <a href="https://github.com/tirth2894/Blood-Bank" target='_blank' rel="noopener noreferrer">
                                         <FaGithub title='Github' className='h-7 w-7' />
                                     </a>
-                                    <a href="#" target='_blank' rel="noopener noreferrer">
+                                    <a href="https://homotracks.wuaze.com" target='_blank' rel="noopener noreferrer">
                                         <button className='mx-3 border-2 border-white p-1 rounded-lg hover:bg-white hover:text-[#0a283b]'>
                                             Let's try <CiShare1 title='try' className='h-5 w-5 inline-block ' />
                                         </button>

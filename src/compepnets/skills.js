@@ -23,7 +23,7 @@ function SkillsActivity() {
             <div className='my-3 mx-3 px-5 w-full md:w-3/5 bg-[#15374d] rounded-2xl'>
                 <p className='text-center text-2xl md:text-3xl m-4'>Activity</p>
 
-                <div className='px-4 py-2 my-2'>
+                <div className='px-4 py-2 my-3'>
                     <p className='text-xl font-bold'>
                         Participated in Hackathons :
                     </p>
@@ -35,9 +35,9 @@ function SkillsActivity() {
                     </p>
                 </div>
 
-                <div className='px-4 pb-3 my-2'>
+                <div className='px-4 pb-3 my-3'>
                     <p className='text-xl font-bold'>
-                    Participated in Event Management :
+                        Participated in Event Management :
                     </p>
                     <p>
                         ~ Member of the technical team for Tech Kaushalya, a technical event organized by the Department of Computer Science, in 2023 and 2024.
