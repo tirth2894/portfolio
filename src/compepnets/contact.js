@@ -15,24 +15,22 @@ function Contact() {
         e.preventDefault();
         let valid = true;
 
-        if(e.target.from_name.value.length < 1 || e.target.from_email.value.length < 1 || e.target.message.value.length < 1)
-        {
+        if (e.target.from_name.value.length < 1 || e.target.from_email.value.length < 1 || e.target.message.value.length < 1) {
             valid = false;
         }
 
         if (valid) {
             emailjs.sendForm('service_ue1f3ox', 'template_kgf9nvg', e.target, 'jZyjJwVXfp0XXgKSE')
-            .then((response) => {
-                if(response.text === "OK")
-                {
-                    setshowAlert(true);
-            
-                    setTimeout(() => {
-                        setshowAlert(false);
-                    }, 4000);
-                }
-            });
-            
+                .then((response) => {
+                    if (response.text === "OK") {
+                        setshowAlert(true);
+
+                        setTimeout(() => {
+                            setshowAlert(false);
+                        }, 4000);
+                    }
+                });
+
         }
     }
 
