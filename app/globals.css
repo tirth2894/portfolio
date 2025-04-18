@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* styles/globals.css */
+
+:root {
+  --bg: #0f172a;
+  --text: #f8fafc;
+  --hover: #232d46;
+  --bgurl: url('./images/background-dark.jpg');
+}
+
+.light-theme {
+  --bg: #ffffff;
+  --text: #000000;
+  --hover: #e4e3e3;
+  --bgurl: url('./images/background-light.png');
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom right, #184174, #16213e, #184174);
+}
+
+main {
+  background: var(--bgurl) no-repeat center center fixed;
+  background-color: var(--bg);
+  background-size: cover;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(117, 117, 117, 0.6);
+  /* Light gray thumb */
+  border-radius: 10px;
+  border: 2px solid transparent;
+  /* creates padding around thumb */
+  background-clip: content-box;
+}
