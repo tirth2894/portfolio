@@ -16,17 +16,17 @@ export default function HomePage({ onNavigate }) {
   const pinnedFolders = [
     {
       name: "About",
-      location: "OneDrive",
+      location: "TirthDrive",
       icon: <AiOutlineDesktop className="text-blue-500 text-3xl" />,
     },
     {
       name: "Pictures",
-      location: "OneDrive",
+      location: "TirthDrive",
       icon: <AiOutlinePicture className="text-purple-600 text-3xl" />,
     },
     {
       name: "Projects",
-      location: "OneDrive",
+      location: "TirthDrive",
       icon: <AiOutlineFolder className="text-yellow-600 text-3xl" />,
     },
   ];
@@ -79,14 +79,21 @@ export default function HomePage({ onNavigate }) {
       type: "image",
       path: "Home\\Pictures",
       icon: <AiOutlinePicture size={16} className="text-gray-500" />,
+    },
+    {
+      name: "Certificate3",
+      type: "image",
+      path: "Home\\Pictures",
+      icon: <AiOutlinePicture size={16} className="text-gray-500" />,
     }
+
   ];
 
   return (
     <div className="w-full px-4">
       {/* Pinned Folders */}
       <h2 className="text-sm text-gray-500 mb-2 font-semibold">Pinned folders</h2>
-      <div className="grid grid-cols-4 gap-4 mb-6">
+      <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-6">
         {pinnedFolders.map((folder, idx) => (
           <div
             key={idx}
@@ -96,7 +103,7 @@ export default function HomePage({ onNavigate }) {
           >
             {folder.icon}
             <span className="text-sm font-medium mt-1">{folder.name}</span>
-            <span className="text-xs text-gray-400">{folder.location}</span>
+            <span className="text-xs text-gray-500">{folder.location}</span>
           </div>
         ))}
       </div>
@@ -104,9 +111,9 @@ export default function HomePage({ onNavigate }) {
       {/* Recent Files */}
       <h2 className="text-sm text-gray-500 mb-2 font-semibold">Recent files</h2>
       <div className="grid grid-cols-[1fr_1fr_1fr] gap-2">
-        <div className="text-xs font-semibold text-gray-400 pl-1">Name</div>
-        <div className="text-xs font-semibold text-gray-400">Path</div>
-        <div className="text-xs font-semibold text-gray-400">Type</div>
+        <div className="text-xs font-semibold text-gray-500 pl-1">Name</div>
+        <div className="text-xs font-semibold text-gray-500">Path</div>
+        <div className="text-xs font-semibold text-gray-500">Type</div>
       </div>
       <div className="flex flex-col divide-y divide-[var(--hover)]">
         {pinnedFiles.map((file, idx) => (
@@ -120,8 +127,8 @@ export default function HomePage({ onNavigate }) {
               {file.icon}
               <span className="text-sm">{file.name}</span>
             </div>
-            <span className="text-xs text-gray-400">{file.path}</span>
-            <span className="text-xs text-gray-400">{file.type}</span>
+            <span className="text-xs text-gray-500">{file.path}</span>
+            <span className="text-xs text-gray-500">{file.type}</span>
           </div>
         ))}
       </div>

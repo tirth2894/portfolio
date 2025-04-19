@@ -12,6 +12,7 @@ import Topbar from "./component/topbar";
 import Sidebar from "./component/sideBar";
 import HomePage from "./component/home";
 import { useState } from "react";
+import MobileWarning from "./component/warning";
 
 export default function Home() {
   const [currentPath, setCurrentPath] = useState(["Home"]);
@@ -33,37 +34,43 @@ export default function Home() {
     }
   };
 
-  return showWelcome ? (
-    <WelcomeScreen onSkip={() => setShowWelcome(false)} />
-  ) : (
-    <main
-      className={`${isFullScreen ? "p-0" : "px-12 py-7"
+  return (
+    <>
+      <MobileWarning />
+      {showWelcome ? (
+        <WelcomeScreen onSkip={() => setShowWelcome(false)} />
+      ) : (
+        
+        <main
+        className={`${isFullScreen ? "p-0" : "px-12 py-7"
         } flex h-screen w-screen items-center justify-center select-none overflow-hidden`}
-    >
-      <div className="w-full h-full shadow-xl border-1 border-gray-700 rounded-lg flex flex-col overflow-hidden">
-        <div className="h-28">
-          <Topbar
-            path={currentPath}
-            setPath={setCurrentPath}
-            isFullScreen={isFullScreen}
-            setIsFullScreen={setIsFullScreen}
-            setShowWelcome={setShowWelcome}
-          />
-        </div>
-        <div className="flex flex-1 overflow-hidden">
-          <Sidebar
-            activeItem={currentPath[1]}
-            onSelect={(folder) =>
-              folder === null
-                ? setCurrentPath(["Home"])
-                : setCurrentPath(["Home", folder])
-            }
-          />
-          <div className="flex-1 bg-[var(--bg)] text-[var(--text)] overflow-auto p-4">
-            {renderPage()}
+        >
+          <div className="w-full h-full shadow-xl  rounded-lg flex flex-col overflow-hidden">
+            <div className="h-28">
+              <Topbar
+                path={currentPath}
+                setPath={setCurrentPath}
+                isFullScreen={isFullScreen}
+                setIsFullScreen={setIsFullScreen}
+                setShowWelcome={setShowWelcome}
+              />
+            </div>
+            <div className="flex flex-1 overflow-hidden">
+              <Sidebar
+                activeItem={currentPath[1]}
+                onSelect={(folder) =>
+                  folder === null
+                    ? setCurrentPath(["Home"])
+                    : setCurrentPath(["Home", folder])
+                }
+              />
+              <div className="flex-1 bg-[var(--bg)]/60 text-[var(--text)] overflow-auto p-4">
+                {renderPage()}
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </main>
+        </main>
+      )}
+    </>
   );
 }

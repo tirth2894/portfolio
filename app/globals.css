@@ -5,27 +5,47 @@
 :root {
   --bg: #0f172a;
   --text: #f8fafc;
-  --hover: #232d46;
-  --bgurl: url('./images/background-dark.jpg');
+  --hover: #343c52;
+  --bgurl: url('./images/background-dark.webp');
 }
 
 .light-theme {
-  --bg: #ffffff;
+  --bg: #F5F5F5;
   --text: #000000;
-  --hover: #e4e3e3;
-  --bgurl: url('./images/background-light.png');
+  --hover: #b1a8a8;
+  --bgurl: url('./images/background-light.webp');
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif ;
   background: linear-gradient(to bottom right, #184174, #16213e, #184174);
 }
 
 main {
-  background: var(--bgurl) no-repeat center center fixed;
+  /* background: var(--bgurl) no-repeat center center fixed;
   background-color: var(--bg);
-  background-size: cover;
+  background-size: cover; */
+  background: linear-gradient(to bottom right, #e27458, #3d455a, #855144);
 }
+
+/* Add this to your global CSS file (e.g., styles/globals.css) */
+
+.falling-character {
+  position: absolute;
+  top: -10vh;
+  color: green; /* Green color for the hacker effect */
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    top: -10vh;
+  }
+  100% {
+    top: 100vh;
+  }
+}
+
 
 ::-webkit-scrollbar {
   width: 10px;

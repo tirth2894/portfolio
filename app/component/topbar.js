@@ -59,7 +59,7 @@ export default function Topbar({ path, setPath, isFullScreen, setIsFullScreen, s
   };
 
   return (
-    <div className="text-[var(--text)] backdrop-blur-lg bg-[var(--bg)]/80 rounded-lg rounded-b-none pb-1 h-full">
+    <div className="text-[var(--text)] bg-[var(--bg)]/60 rounded-lg rounded-b-none pb-1 h-full">
       <div className="w-full rounded-t-xl flex justify-between items-center px-2 pt-1 border-b-0">
         <div onClick={()=>window.location.reload()} className="flex items-center justify-center space-x-1 cursor-pointer">
           <PiFinnTheHumanBold className="ml-1" />
@@ -119,7 +119,7 @@ export default function Topbar({ path, setPath, isFullScreen, setIsFullScreen, s
               <AiOutlineArrowUp size={20} />
             </button>
 
-            <div className="flex items-center w-full gap-1 text-sm px-2 py-1 rounded border border-gray-400">
+            <div className="flex items-center w-full gap-1 text-sm px-2 py-1 rounded border border-gray-500">
               <AiOutlineHome size={14} className="mr-1" />
               <span>{currentPath}</span>
             </div>
@@ -129,9 +129,9 @@ export default function Topbar({ path, setPath, isFullScreen, setIsFullScreen, s
             <input
               type="text"
               placeholder="Search Home"
-              className="w-full text-sm px-3 py-1 rounded outline-none border border-gray-400"
+              className="w-full text-sm px-3 py-1 rounded outline-none border border-gray-500"
             />
-            <AiOutlineSearch className="absolute right-2 top-2 text-gray-400" size={16} />
+            <AiOutlineSearch className="absolute right-2 top-2 text-gray-500" size={16} />
           </div>
         </div>
       </div>

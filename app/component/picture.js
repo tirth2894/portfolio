@@ -9,6 +9,7 @@ export default function Picture() {
   const images = [
     "Certificate1",
     "Certificate2",
+    "Certificate3"
   ];
 
   return (

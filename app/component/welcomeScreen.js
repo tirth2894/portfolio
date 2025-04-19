@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
-import uphoto from "../images/uphoto.jpeg"; // Adjust the path if necessary
+import uphoto from "../images/uphoto.webp"; 
 
 export default function WelcomeScreen({ onSkip }) {
   const [showMessage, setShowMessage] = useState(false);
@@ -75,7 +75,7 @@ export default function WelcomeScreen({ onSkip }) {
                 src={uphoto}
                 alt="Certificate preview"
                 className="rounded-xl w-full h-full object-cover"
-                layout="responsive"
+                priority={true}
               />
             </motion.div>
           </div>

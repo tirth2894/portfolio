@@ -12,7 +12,7 @@ export default function Sidebar({ onSelect, activeItem }) {
   ];
 
   return (
-    <div className="w-56 h-full border-r-2 border-[var(--hover)] bg-[var(--bg)] text-[var(--text)] overflow-y-auto py-4">
+    <div className="w-56 h-full border-r-2 border-[var(--hover)] bg-[var(--bg)]/60 text-[var(--text)] overflow-y-auto py-4">
       <ul className="space-y-1">
         {items.map(({ icon, label }) => {
           const isActive = activeItem === label;
