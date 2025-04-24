@@ -45,7 +45,7 @@ export default function Home() {
         className={`${isFullScreen ? "p-0" : "px-12 py-7"
         } flex h-screen w-screen items-center justify-center select-none overflow-hidden`}
         >
-          <div className="w-full h-full shadow-xl  rounded-lg flex flex-col overflow-hidden">
+          <div className="w-full h-full bg-[var(--bg)]/70 shadow-xl  rounded-lg flex flex-col overflow-hidden">
             <div className="h-28">
               <Topbar
                 path={currentPath}
@@ -64,7 +64,7 @@ export default function Home() {
                     : setCurrentPath(["Home", folder])
                 }
               />
-              <div className="flex-1 bg-[var(--bg)]/60 text-[var(--text)] overflow-auto p-4">
+              <div className="flex-1  text-[var(--text)] overflow-auto p-4">
                 {renderPage()}
               </div>
             </div>

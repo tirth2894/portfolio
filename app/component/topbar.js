@@ -59,7 +59,7 @@ export default function Topbar({ path, setPath, isFullScreen, setIsFullScreen, s
   };
 
   return (
-    <div className="text-[var(--text)] bg-[var(--bg)]/60 rounded-lg rounded-b-none pb-1 h-full">
+    <div className="text-[var(--text)] rounded-lg rounded-b-none pb-1 h-full">
       <div className="w-full rounded-t-xl flex justify-between items-center px-2 pt-1 border-b-0">
         <div onClick={()=>window.location.reload()} className="flex items-center justify-center space-x-1 cursor-pointer">
           <PiFinnTheHumanBold className="ml-1" />

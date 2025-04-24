@@ -2,13 +2,12 @@
 import { useState } from "react";
 import { FaFileAlt } from "react-icons/fa";
 import NotepadWindow from "./notePad"; 
+import portfolioData from "@/app/data/content"; // Assuming you have a file with the file data
 
 export default function About() {
-  const files = [
-    "Attendence System",
-    "Collab",
-    "Cityscape Challenges"
-  ];
+  const files = Object.keys(portfolioData).filter(
+    key => portfolioData[key].section === "Projects"
+  );
 
   const [openedFile, setOpenedFile] = useState(null);
 

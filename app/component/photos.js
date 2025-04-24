@@ -4,29 +4,11 @@ import { IoMdClose } from "react-icons/io";
 import { FaRegSquare, FaMinus } from "react-icons/fa";
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-
-import certificate1 from "../images/certificate1.webp";
-import certificate2 from "../images/certificate2.webp";
-import certificate3 from "../images/certificate3.webp";
+import portfolioData from "@/app/data/content"; // Assuming you have a file with the file data
 
 export default function Photos({ openedFile, setOpenedFile }) {
     const [isFullScreen, setIsFullScreen] = useState(false);
     const [isClosing, setIsClosing] = useState(false);
-    let src = null;
-
-    switch (openedFile) {
-        case "Certificate1":
-            src = certificate1;
-            break;
-        case "Certificate2":
-            src = certificate2;
-            break;
-        case "Certificate3":
-            src = certificate3;
-            break;
-        default:
-            break;
-    }
 
     const handleClose = () => {
         setIsClosing(true);
@@ -62,6 +44,7 @@ export default function Photos({ openedFile, setOpenedFile }) {
         },
     };
 
+    console.log(portfolioData["SIH 2023"]);
     return (
         <AnimatePresence>
             {!isClosing && (
@@ -93,12 +76,13 @@ export default function Photos({ openedFile, setOpenedFile }) {
 
                     {/* Image Content */}
                     <div className="flex flex-1 items-center justify-center px-4 py-2 text-[var(--text)] text-sm whitespace-pre-wrap overflow-auto space-y-4">
-                        {src && (
+                        {(
                             <Image
-                                src={src}
+                                src={portfolioData[openedFile].src}
                                 alt="Preview"
+                                height={800}
                                 width={700}
-                                className="object-contain"
+                                className="object-contain h-fit"
                             />
                         )}
                     </div>

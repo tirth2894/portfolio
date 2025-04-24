@@ -2,15 +2,14 @@
 import { useState } from 'react';
 import { FaRegImage } from 'react-icons/fa';
 import Photos from './photos';
+import portfolioData from "@/app/data/content"; // Assuming you have a file with the file data
 
 export default function Picture() {
   const [openedFile, setOpenedFile] = useState(null);
 
-  const images = [
-    "Certificate1",
-    "Certificate2",
-    "Certificate3"
-  ];
+  const images = Object.keys(portfolioData).filter(
+    key => portfolioData[key].section === "Pictures"
+  );
 
   return (
     <div className="h-full p-1">
@@ -22,7 +21,7 @@ export default function Picture() {
             onDoubleClick={() => setOpenedFile(file)}
             title={'Double click to open'}
           >
-            <FaRegImage className="text-purple-600 text-5xl mb-2" />
+            <FaRegImage className="text-emerald-600 text-5xl mb-2" />
             <span className="text-xs break-words">{file}</span>
           </div>
         ))}

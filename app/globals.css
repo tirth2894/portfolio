@@ -6,14 +6,14 @@
   --bg: #0f172a;
   --text: #f8fafc;
   --hover: #343c52;
-  --bgurl: url('./images/background-dark.webp');
+  --bgurl: url('/public/images/background-dark.webp');
 }
 
 .light-theme {
-  --bg: #F5F5F5;
+  --bg: #ffffff;
   --text: #000000;
   --hover: #b1a8a8;
-  --bgurl: url('./images/background-light.webp');
+  --bgurl: url('/public/images/background-light.webp');
 }
 
 body {
@@ -25,7 +25,7 @@ main {
   /* background: var(--bgurl) no-repeat center center fixed;
   background-color: var(--bg);
   background-size: cover; */
-  background: linear-gradient(to bottom right, #e27458, #3d455a, #855144);
+  background: linear-gradient(to bottom right, #e27458, #4c5772, #855144);
 }
 
 /* Add this to your global CSS file (e.g., styles/globals.css) */

@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
-import uphoto from "../images/uphoto.webp"; 
+import uphoto from "@/public/images/uphoto.webp"; // Adjust the path as necessary
 
 export default function WelcomeScreen({ onSkip }) {
   const [showMessage, setShowMessage] = useState(false);

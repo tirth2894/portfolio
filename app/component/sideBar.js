@@ -5,14 +5,14 @@ export default function Sidebar({ onSelect, activeItem }) {
   const items = [
     { icon: <BsFillHouseDoorFill className="text-lg text-amber-700" />, label: "Home" },
     { icon: <AiOutlineDesktop className="text-lg text-blue-500" />, label: "About" },
-    { icon: <AiOutlinePicture className="text-lg text-purple-600" />, label: "Pictures" },
+    { icon: <AiOutlinePicture className="text-lg text-emerald-600" />, label: "Pictures" },
     { icon: <AiOutlineFolder className="text-lg text-yellow-600" />, label: "Projects" },
     // { icon: <BsMusicNote className="text-lg text-pink-600" />, label: "Music" },
     // { icon: <CgGames className="text-lg text-red-600" />, label: "Games" },
   ];
 
   return (
-    <div className="w-56 h-full border-r-2 border-[var(--hover)] bg-[var(--bg)]/60 text-[var(--text)] overflow-y-auto py-4">
+    <div className="w-56 h-full border-r-2 border-[var(--hover)] text-[var(--text)] overflow-y-auto py-4">
       <ul className="space-y-1">
         {items.map(({ icon, label }) => {
           const isActive = activeItem === label;

@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function NotepadWindow({ openedFile, setOpenedFile }) {
   const contentKey = openedFile;
-  const content = portfolioData[contentKey];
+  const content = portfolioData[contentKey].data;
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
