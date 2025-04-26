@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         <meta name="keywords" content="Tirth Patel, Web Developer, Portfolio, Projects, Software Developer, Fullstack Developer, Frontend Developer, Backend Developer" />
         <meta name="author" content="Tirth Patel" />
         <meta name="robots" content="index, follow" />
-        <meta name="google-site-verification" content="hUgSVVfMi7E2Wd_yv4xtd8SumW8-3w87bkgn4wqchmg" />
+        <meta name="google-site-verification" content="KcRVI8mggXp1CuFxr41IADAEJjnBFHhHNiSk457O-5U" />
 
         <meta property="og:title" content="Tirth's Portfolio" />
         <meta property="og:description" content="Explore Tirth Patel's creative portfolio styled like a file explorer." />
