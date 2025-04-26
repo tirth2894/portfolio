@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
 
         <meta property="og:title" content="Tirth's Portfolio" />
         <meta property="og:description" content="Explore Tirth Patel's creative portfolio styled like a file explorer." />
-        <meta property="og:image" content="/images/previewImage.png" /> 
+        <meta property="og:image" content="https://tirth-patel-portfolio.vercel.app/images/previewImage.png" />
         <meta property="og:url" content="https://tirth-patel-portfolio.vercel.app/" />
         <meta property="og:type" content="website" />
       </head>
