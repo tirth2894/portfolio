@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="description" content="Tirth Patel's portfolio - Explore my projects, skills, and achievements in a creative file explorer design!" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="keywords" content="Tirth Patel, Web Developer, Portfolio, Projects, Software Developer, Fullstack Developer, Frontend Developer, Backend Developer" />
