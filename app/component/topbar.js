@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import {
   AiOutlinePlus,
   AiOutlineSearch,
@@ -7,6 +7,7 @@ import {
   AiOutlineArrowRight,
   AiOutlineArrowUp,
   AiOutlineHome,
+  AiOutlinePicture
 } from "react-icons/ai";
 import {
   BsTrash3,
@@ -14,27 +15,45 @@ import {
   BsFilter,
   BsViewList,
   BsSortDown,
+  BsFileEarmarkText
 } from "react-icons/bs";
-import { FaRegSquare, FaMinus } from "react-icons/fa";
+import { BiLogoGmail, BiLogoInstagramAlt } from "react-icons/bi";
+import { FaRegSquare, FaMinus, FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
+import { LiaDownloadSolid } from "react-icons/lia";
 import { PiFinnTheHumanBold } from "react-icons/pi";
 import ThemeToggle from "./theamToggle";
 import portfolioData from "../data/content";
-import { BsFileEarmarkText } from "react-icons/bs";
-import { AiOutlinePicture } from "react-icons/ai";
 import NotepadWindow from "./notePad";
 import Photos from "./photos";
+
 
 export default function Topbar({ path, setPath, isFullScreen, setIsFullScreen, setShowWelcome }) {
   const currentPath = path.join(" > ");
 
   const [history, setHistory] = useState([path]);
   const [currentIndex, setCurrentIndex] = useState(0);
-
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [openedFile, setOpenedFile] = useState(null);
 
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
+
+  const profileRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (profileRef.current && !profileRef.current.contains(event.target)) {
+        setIsProfileOpen(false);
+      }
+    };
+    if (isProfileOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isProfileOpen]);
 
   // Update history if path changes externally
   useEffect(() => {
@@ -96,8 +115,6 @@ export default function Topbar({ path, setPath, isFullScreen, setIsFullScreen, s
       }));
 
     setSearchResults(results);
-
-    console.log(searchQuery, searchResults)
   };
 
 
@@ -124,7 +141,7 @@ export default function Topbar({ path, setPath, isFullScreen, setIsFullScreen, s
 
       <div className="w-full px-3 flex flex-col">
         {/* Top Row */}
-        <div className="flex items-center justify-between text-sm">
+        <div className="flex items-center justify-between text-sm py-0.5">
           <div className="flex items-center space-x-3">
             <button className="p-2 cursor-pointer">
               <AiOutlinePlus size={16} className="opacity-50" />
@@ -145,6 +162,86 @@ export default function Topbar({ path, setPath, isFullScreen, setIsFullScreen, s
               <BsFilter size={16} className="opacity-50" />
             </button>
             <ThemeToggle />
+
+          </div>
+          <div className="relative flex items-center justify-center" >
+            <div ref={profileRef}>
+              <button
+                title="Tirth Profile"
+                className="bg-purple-400 px-4 py-1 rounded-md flex items-center justify-center space-x-1 cursor-pointer text-[var(--text)]"
+                onClick={() => setIsProfileOpen(!isProfileOpen)}
+              >
+                <span>CV</span>
+                <LiaDownloadSolid size={20}/>
+              </button>
+
+              {isProfileOpen && (
+                <div className="absolute top-5 right-0 mt-2 w-80 bg-[var(--bg)]/70 backdrop-blur-lg shadow-2xl rounded-2xl p-6 animate-fade-in z-60 flex flex-col items-center space-y-5">
+                  {/* Profile Picture */}
+                  <img
+                    src="/images/uphoto.webp"
+                    alt="Tirth Patel"
+                    className="w-32 h-32 rounded-full object-cover"
+                  />
+
+                  {/* Name & Email */}
+                  <div className="text-center">
+                    <h2 className="text-2xl font-semibold text-[var(--text)]">Tirth Patel</h2>
+                    <p className="text-sm text-[var(--text)] opacity-80">tirthptl2894@gmail.com</p>
+                  </div>
+
+                  {/* Social Links */}
+                  <div className="flex items-center justify-center gap-5 text-[var(--text)]">
+                    <a
+                      href="mailto:tirth@example.com"
+                      title="Email"
+                      className="transition-opacity opacity-70 hover:opacity-100"
+                    >
+                      <BiLogoGmail size={22} />
+                    </a>
+                    <a
+                      href="https://github.com/tirth2894"
+                      title="GitHub"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-opacity opacity-70 hover:opacity-100"
+                    >
+                      <FaGithub size={22} />
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/tirth-patel-0a5a18257"
+                      title="LinkedIn"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-opacity opacity-70 hover:opacity-100"
+                    >
+                      <FaLinkedin size={22} />
+                    </a>
+                    <a
+                      href="https://www.instagram.com/_tirth_patel_04_?igsh=MXdraGE4M2lpazE2bQ=="
+                      title="Instagram"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-opacity opacity-70 hover:opacity-100"
+                    >
+                      <BiLogoInstagramAlt size={22} />
+                    </a>
+                  </div>
+
+                  {/* Download CV */}
+                  <a
+                    href="/resources/cv.pdf"
+                    download
+                    className="w-full flex items-center justify-center"
+                  >
+                    <button className="w-full opacity-90 hover:opacity-100 py-2 rounded-md text-sm font-medium bg-purple-400 cursor-pointer transition-all">Download CV</button>
+                  </a>
+                </div>
+
+
+              )}
+            </div>
+
           </div>
 
         </div>
@@ -163,7 +260,7 @@ export default function Topbar({ path, setPath, isFullScreen, setIsFullScreen, s
             </button>
 
             <div className="flex items-center w-full gap-1 text-sm px-2 py-1 rounded border border-gray-500">
-              <AiOutlineHome size={14} className="mr-1" />
+              <AiOutlineHome size={14} className="mr-1 cursor-pointer" onClick={()=>setPath(["Home"])} />
               <span>{currentPath}</span>
             </div>
           </div>
@@ -179,7 +276,7 @@ export default function Topbar({ path, setPath, isFullScreen, setIsFullScreen, s
             <AiOutlineSearch className="absolute right-2 top-2 text-gray-500" size={16} />
 
             {searchResults.length > 0 && (
-              <div className="absolute left-0 w-full bg-[var(--bg)] shadow-md border border-[var(--hover)] z-50">
+              <div className="absolute left-0 w-full bg-[var(--bg)] shadow-2xl border border-[var(--hover)] z-50">
                 {searchResults.map(({ key, type }) => (
                   <div
                     key={key}

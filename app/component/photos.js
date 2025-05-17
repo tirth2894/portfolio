@@ -44,7 +44,6 @@ export default function Photos({ openedFile, setOpenedFile }) {
         },
     };
 
-    console.log(portfolioData["SIH 2023"]);
     return (
         <AnimatePresence>
             {!isClosing && (

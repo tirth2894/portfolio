@@ -107,7 +107,7 @@ export default function NotepadWindow({ openedFile, setOpenedFile }) {
                 <div key={idx} className="mb-7">
                   <div className="text-lg font-bold mb-1">{section.title}:</div>
                   {section.description && (
-                    <div className="text-sm text-[var(--text)]">
+                    <div className=" text-base text-[var(--text)]">
                       {section.description}
                     </div>
                   )}
@@ -117,7 +117,7 @@ export default function NotepadWindow({ openedFile, setOpenedFile }) {
                         <button
                           key={index}
                           onClick={() => window.open(link.url, "_blank")}
-                          className="bg-blue-500 text-white text-xs px-4 py-2 rounded-md shadow-md hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-300 cursor-pointer"
+                          className="bg-blue-500 text-white text-base px-3 py-1 rounded-md shadow-md hover:bg-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-300 cursor-pointer"
                         >
                           {link.label}
                         </button>
@@ -129,11 +129,11 @@ export default function NotepadWindow({ openedFile, setOpenedFile }) {
             ) : content ? (
               <div>
                 <div className="text-lg font-bold mb-1">{content.title}</div>
-                <div className="text-sm text-[var(--text)]">
+                <div className="text-base text-[var(--text)]">
                   {content.description}
                 </div>
                 {content.links && (
-                  <div className="mt-2 flex flex-wrap gap-3 text-blue-500 text-xs">
+                  <div className="mt-2 flex flex-wrap gap-3 text-blue-500 text-base px-3 py-1">
                     {content.links.map((link, index) => (
                       <a
                         key={index}
