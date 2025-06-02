@@ -65,14 +65,14 @@ export const metadata = {
   verification: {
     google: "KcRVI8mggXp1CuFxr41IADAEJjnBFHhHNiSk457O-5U",
   },
-  other: [
-    { name: "google-adsense-account", content: "ca-pub-6603581257329396" }
-  ],
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta name="google-adsense-account" content="ca-pub-6603581257329396" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {children}
       </body>
