@@ -101,7 +101,7 @@ export default function NotepadWindow({ openedFile, setOpenedFile }) {
           </div>
 
           {/* Text Content */}
-          <div className="flex-1 px-4 py-2 bg-[var(--bg)] font-mono text-[var(--text)] text-sm whitespace-pre-wrap overflow-auto space-y-4">
+          <div className="flex-1 px-4 py-2 bg-[var(--bg)] text-[var(--text)] text-sm whitespace-pre-wrap overflow-auto space-y-4">
             {Array.isArray(content) ? (
               content.map((section, idx) => (
                 <div key={idx} className="mb-7">

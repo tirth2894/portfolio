@@ -52,7 +52,7 @@ export default function Photos({ openedFile, setOpenedFile }) {
                     animate="visible"
                     exit="exit"
                     variants={animationVariants}
-                    className={`${isFullScreen ? "w-screen h-screen top-0 right-0" : "w-3/4 h-4/5 top-10 right-5"} absolute border-[var(--hover)] bg-[var(--bg)] rounded-lg shadow-2xl border flex flex-col font-sans z-50`}
+                    className={`${isFullScreen ? "w-screen h-screen top-0 right-0" : "w-3/4 h-4/5 top-10 right-5"} absolute border-[var(--hover)] bg-[var(--bg)] rounded-lg shadow-2xl border flex flex-col z-50`}
                 >
                     {/* Top Bar */}
                     <div className="flex justify-between items-center px-3 h-8 border-[var(--hover)] border-b text-[var(--text)] text-sm">

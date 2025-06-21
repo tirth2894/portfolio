@@ -36,16 +36,15 @@ export default function Home() {
 
   return (
     <>
-      <MobileWarning />
-      {showWelcome ? (
-        <WelcomeScreen onSkip={() => setShowWelcome(false)} />
-      ) : (
-        
-        <main
+      <main
         className={`${isFullScreen ? "p-0" : "px-12 py-7"
-        } flex h-screen w-screen items-center justify-center select-none overflow-hidden`}
-        >
-          <div className="w-full h-full bg-[var(--bg)]/70 shadow-xl  rounded-lg flex flex-col overflow-hidden">
+          } flex h-screen w-screen items-center justify-center select-none overflow-hidden`}
+      >
+        <MobileWarning />
+        {showWelcome ? (
+          <WelcomeScreen onSkip={() => setShowWelcome(false)} />
+        ) : (
+          <div className="w-full h-full bg-[var(--bg)]/70 shadow-xl border-2 border-[var(--bg)]/40  rounded-lg flex flex-col overflow-hidden">
             <div className="h-28">
               <Topbar
                 path={currentPath}
@@ -69,8 +68,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </main>
-      )}
+        )}
+      </main>
     </>
   );
 }

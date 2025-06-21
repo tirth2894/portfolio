@@ -1,83 +1,66 @@
 "use client";
-import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import uphoto from "@/public/images/uphoto.webp"; // Adjust the path as necessary
+import avatar from "@/public/images/tirth.jpg"; // Replace with your own image
 
-export default function WelcomeScreen({ onSkip }) {
-  const [showMessage, setShowMessage] = useState(false);
-  const [isExiting, setIsExiting] = useState(false);
+export default function welcomeScreen({ onSkip }) {
+  const [time, setTime] = useState(new Date());
+  const [exit, setExit] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowMessage(true);
-    }, 100);
-    return () => clearTimeout(timer);
+    const interval = setInterval(() => setTime(new Date()), 1000);
+    return () => clearInterval(interval);
   }, []);
 
-  const handleClick = () => {
-    setIsExiting(true);
-    setTimeout(() => {
-      onSkip();
-    }, 800); // Matches the animation duration
+  const formattedTime = time.toLocaleTimeString("en-GB", {
+    hour: "2-digit",
+    minute: "2-digit",
+  });
+
+  const formattedDate = time.toLocaleDateString("en-GB", {
+    weekday: "long",
+    month: "long",
+    day: "numeric",
+  });
+
+  const handleUnlock = () => {
+    setExit(true);
+    setTimeout(() => onSkip(), 1000);
   };
 
   return (
     <AnimatePresence>
-      {!isExiting && (
+      {!exit && (
         <motion.div
-          onClick={handleClick}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          exit={{ y: "-100%", opacity: 0 }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="flex h-screen w-screen items-center justify-center select-none overflow-hidden text-white"
+          exit={{ opacity: 0, y: -100 }}
+          transition={{ duration: 1 }}
+          className="fixed inset-0 z-50 flex items-center justify-center "
+          onClick={handleUnlock}
         >
-          <div className="flex flex-col md:flex-row items-center justify-between w-full max-w-6xl px-4 z-10">
-            {/* Left: Text Content */}
-            <div className="text-center md:text-left max-w-xl">
-              <motion.h1
-                transition={{ delay: 0.8, duration: 1 }}
-                className="text-4xl md:text-5xl font-bold tracking-tight drop-shadow-md"
-              >
-                Welcome to <span className="text-[#9494d1]">Tirth's</span> Portfolio
-              </motion.h1>
+          <div className="z-10 flex flex-col justify-center items-center text-white space-y-1 h-full">
+            <div className="text-lg ">{formattedDate}</div>
+            <div className="text-5xl font-bold">{formattedTime}</div>
 
-              <motion.p
-                initial={{ opacity: 0 }}
-                animate={{ opacity: showMessage ? 1 : 0 }}
-                transition={{ delay: 0.5, duration: 1 }}
-                className="text-gray-300 mt-4 text-base md:text-lg"
-              >
-                A passionate developer & designer who loves to create beautiful and functional web applications.
-              </motion.p>
-
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: showMessage ? 1 : 0 }}
-                transition={{ delay: 1, duration: 1 }}
-                className="mt-8 flex items-center justify-center md:justify-start gap-2 text-sm md:text-base text-white font-medium animate-pulse"
-              >
-                Click here to explore my portfolio
-                <FaArrowRight size={16} />
-              </motion.div>
-            </div>
-
-            {/* Right: Image */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: showMessage ? 1 : 0 }}
-              transition={{ delay: 1, duration: 1 }}
-              className="md:ml-8 w-98 h-98"
-            >
+            <div className="mt-10 p-6 flex flex-col items-center space-y-3 ">
               <Image
-                src={uphoto}
-                alt="Certificate preview"
-                className="rounded-xl w-full h-full object-cover"
-                priority={true}
+                src={avatar}
+                alt="User"
+                width={100}
+                height={100}
+                className="rounded-full border-2 border-white/20 shadow-lg"
               />
-            </motion.div>
+              <div className="flex flex-col items-center">
+                <p className="font-medium text-lg">Tirth Patel</p>
+                <p className="text-sm text-gray-300">A Full stack developer</p>
+              </div>
+              <button className="mt-4 px-4 py-1 bg-white/10 hover:bg-white/20 text-white rounded-lg backdrop-blur-md border border-white/20 transition-all duration-300">
+                Sign in
+              </button>
+
+            </div>
           </div>
         </motion.div>
       )}
